@@ -47,7 +47,6 @@ html { font-size: 1rem; }
 }
 
 .SubHeader{
-    min-height: 40px;
     font-size: 2rem;
     background-color: var(--blue-subHeader);
     font-weight: bold;
