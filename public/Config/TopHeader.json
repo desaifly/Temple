@@ -1,0 +1,24 @@
+{
+    "navItems": [
+        {
+            "label": "Home",
+            "href": "#/"
+        },
+        {
+            "label": "News",
+            "href": "#/News"
+        },
+        {
+            "label": "Events",
+            "href": "#/events"
+        },
+        {
+            "label": "Visit",
+            "href": "#/visit"
+        },
+        {
+            "label": "Support",
+            "href": "#/support"
+        }
+    ]
+}

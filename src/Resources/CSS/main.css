@@ -1,0 +1,101 @@
+:root {
+    --black: #1e2431;
+    --grey-mid: #70737a;
+    --blue-mid: #74cfed;
+    --blue-dark: #1289af;
+    --blue-subHeader: #0088cc;
+    --white: #ffffff;
+    --grey-dark: #515151;
+    --white-two: #f5f5f5;
+    --green-light: #aeefe8;
+    --green: #4caf50;
+    --grey-light: #bfbfbf;
+    --grey-light-light: #d8d8d84b;
+    --red: #cb4b57;
+    --blue-light: #effbff;
+    --report1:#1289AF;
+    --report2: #2697BB;
+    --report3: #39A5C8;
+    --report4: #4DB3D4;
+    --report5: #60C1E1;
+    --report6: #74CFED;
+}
+
+/* change Font size based on screen size*/
+html { font-size: 1rem; }
+
+@media (min-width: 576px) {
+    html { font-size: 2.5rem; }
+}
+@media (min-width: 768px) {
+    html { font-size: 1.75rem; }
+}
+@media (min-width: 992px) {
+    html { font-size: 1.25rem; }
+}
+@media (min-width: 1200px) {
+    html { font-size: 1rem; }
+}
+
+.ImageSize1{
+    width: 1rem;
+    height: 1rem;
+}
+.ImageSize2{
+    width: 2rem;
+    height: 2rem;
+}
+
+.SubHeader{
+    min-height: 40px;
+    font-size: 2rem;
+    background-color: var(--blue-subHeader);
+    font-weight: bold;
+    color: var(--white); 
+}
+
+.SubHeaderImageModal{
+    font-size: 1rem;
+    background-color: var(--blue-subHeader);
+    font-weight: bold;
+    color: var(--white); 
+}
+
+.PhotoHeader{
+    min-height: 40px;
+    font-size: 1rem;
+    background-color: var(--blue-subHeader);
+    font-weight: bold;
+    color: var(--white); 
+}
+
+.LeftPhoto{
+    width: 12rem;
+    height: 9rem;
+    position: sticky;
+}
+
+.FontBodyRegular{
+    font-size: 1.2rem;
+}
+.ContentBottomLine{
+    border-bottom: 0.5rem solid #0088cc;
+}
+.NewsTitle{
+   font-size: 1.25rem;
+   background-color: var(--green);
+   color: var(--white);
+   font-weight: bold;
+   text-align: center;
+   border-radius: .5rem;
+}
+.BlockTitle{
+    width: 12rem;
+    font-size: 1.5rem;
+    background-color: var(--blue-subHeader);
+    font-weight: bold;
+    color: var(--white);
+    border-radius: .5rem;
+    text-align: center;
+    vertical-align: middle; 
+}
