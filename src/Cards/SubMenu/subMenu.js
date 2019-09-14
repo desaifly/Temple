@@ -1,55 +1,54 @@
 import * as React from "react";
 import Loading from "../Loading/Loading";
+import { Link } from 'react-router-dom';
 import { fadeIn } from "animate.css"
-import { Settings } from "../../Resources/Utility/Config";
 
-class subMenu extends React.Component {
+
+class SubMenu extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            Settings: null,
-            itemsToShow: props.itemsToShow ? props.itemsToShow : 3,
+            Settings: props.Settings ? props.Settings : null,
+
         }
     }
 
     componentDidUpdate(prevProps) {
-        if (this.props.itemsToShow !== prevProps.itemsToShow) {
-            this.setState({ itemsToShow: this.props.itemsToShow ? this.props.itemsToShow : null });
+        if (this.props.Settings !== prevProps.Settings) {
+            this.setState({ Settings: this.props.Settings ? this.props.Settings : null });
         }
     }
     componentDidMount() {
 
-        let localSettings = null;
-        Settings(["News.json"])
-            .then(result => {
-                localSettings = JSON.parse(result);
-                this.setState({ Settings: localSettings })
-            })
+        // let localSettings = null;
+        // Settings(["News.json"])
+        //     .then(result => {
+        //         localSettings = JSON.parse(result);
+        //         this.setState({ Settings: localSettings })
+        //     })
     }
 
     render() {
-        const { Settings, viewModel, itemsToShow } = this.state;
+        const { Settings } = this.state;
         return (
-
-
-
             Settings
                 ?
-                Settings.News.map((newsItem, i) => {
-                    if (i < itemsToShow - 2) {
-                        return (
-                            <div className="m-2">
-                                <div className="NewsTitle d-inline-flex ml-2 pt-1 pb-1 pl-2 pr-2">{newsItem.title}</div>
-                                <div className="d-inline-flex ml-2 pl-2 pr-2">{newsItem.description}</div>
-                            </div>
+                <div className=" d-flex flex-wrap pt-2 pb-2 SubMenu w-100">
+                    {
+                        Settings.map((subMenuItem, i) => {
 
-                        )
+                            return (
+                                <Link className="HoverLink SubMenuText ml-2 d-flex" to={subMenuItem.Path} >
+                                    &nbsp;{subMenuItem.title} &nbsp;
+                                    </Link>
+                            )
+                        })
                     }
-                })
+                </div>
                 : <div className="ImageSize2 ml-2 pl-2"><Loading /></div>
 
 
         )
     }
 }
-export default subMenu
+export default SubMenu

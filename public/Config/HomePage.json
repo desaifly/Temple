@@ -33,10 +33,25 @@
     },
     "subMenu": [
         {
-            "title": "History"
+            "title": "About",
+            "Path": "/About",
+            "GenericPage": false
         },
         {
-            "title": "Resident"
+            "title": "History",
+            "Path": "/GP/History"
+        },
+        {
+            "title": "Resident",
+            "Path": "/GP/Resident"
+        },
+        {
+            "title": "Committee",
+            "Path": "/GP/Committee"
+        },
+        {
+            "title": "Forest Tradition",
+            "Path": "/GP/ForestTradition"
         }
     ],
     "contentSections": [
@@ -48,27 +63,12 @@
             "Title": "Events",
             "Content": "This week's event",
             "BlockType": "EventCalender",
-            "type": "Weekly"
+            "viewType": "Weekly"
         },
         {
             "Title": "News",
             "Content": "News Updates",
             "BlockType": "NewsList"
         }
-    ],
-    "History": {
-        "subHeaderText": "The Journey of a Thousand Miles",
-        "contentSections": [
-            {
-                "Title": "The Old and New",
-                "content": "Twenty five years ago the Evening Post did a full page photo essay on the monastery. A recent visit from the same photographer resulted in a new version.",
-                "BlockType": "html"
-            },
-            {
-                "Title": "History",
-                "content": "Bodhinyanarama is associated with the many branch monasteries of Venerable Ajahn Chah (1918-1992). In his home province in north-eastern Thailand, Ajahn Chah inspired many westerners by the simplicity of the traditional monastic lifestyle and by his clarity, wisdom, and compassionate humour. In 1977 he was invited to England by the English Sangha Trust to investigate the possibility of establishing a monastic presence in Britain. Finding the reception favorable he left his most senior western disciple, Ajahn Sumedho, and three other monks to establish a monastic community, first in London and later at Chithurst Monastery in West Sussex. In 1982 Ajahn Sumedho visited New Zealand and was encouraged to send monks to establish a monastery near Wellington. A group of devoted Buddhists formed a charitable association and in 1985 invited two monks from the United Kindom to live in New Zealand. A superb location, a thickly-wooded, easily accessible valley near Wellington was soon purchased. Since then, much energy and commitment by many people have created the beautiful buildings, gardens, and forest walks that comprise the monastery today. <br/>Bodhinyanarama belongs to the network of Ajahn Chah's monasteries in the United Kingdom, Australia, Switzerland, Italy, Canada, United States, France and Malaysia. The monastic community of monks (sangha) is structured according to the vinaya code of conduct, which was established by the Buddha. The sangha depends entirely on the generosity of the laity for its basic needs of food, robes, shelter, and medicines. The sangha lives simply and has few worldly obligations. Monks do not possess independent means of support. They do not handle money, own property, or store food. In return the sangha offers spiritual guidance and reflection to the lay community through verbal teachings and by its living presence. The monks train themselves to be worthy of respect and of the generosity on which they depend. The sangha and the laity thus support, balance, and nourish one another in a way that benefits the whole community.",
-                "BlockType": "html"
-            }
-        ]
-    }
+    ]
 }

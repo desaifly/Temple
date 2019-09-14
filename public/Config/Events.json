@@ -1,0 +1,22 @@
+{
+    "subHeaderText": "Monastery Events",
+    "viewType": "Monthly",
+    "subMenu": [
+        {
+            "title": "Events",
+            "Path": "/Events"
+        },
+        {
+            "title": "Teaching",
+            "Path": "/GP/Teaching"
+        },
+        {
+            "title": "Retreats",
+            "Path": "/GP/Retreats"
+        },
+        {
+            "title": "Books",
+            "Path": "/GP/Books"
+        }
+    ]
+}

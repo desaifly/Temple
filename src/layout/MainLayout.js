@@ -3,6 +3,8 @@ import { HashRouter, Switch, Route } from 'react-router-dom';
 import { TopHeader } from './TopHeader';
 import $ from 'jquery';
 import HomePage from '../Sections/Home/HomePage';
+import GenericPage from '../Sections/Generic/GenericPage';
+import Events from '../Sections/Events/Events';
 
 class MainLayout extends React.Component {
     constructor(props) {
@@ -23,6 +25,9 @@ class MainLayout extends React.Component {
                         <Suspense fallback={<div className="mx-auto text-center">Loading</div>}>
                             <div className="h-100">
                                 <Switch>
+                                    <Route exact path="/GP/:page" render={(props) => (<GenericPage page={props.match.params.page} />)} />
+                                    <Route exact path="/:prefix/:page" render={(props) => (<GenericPage prefix={props.match.params.prefix} page={props.match.params.page} />)} />
+                                    <Route exact path="/Events" render={(props) => (<Events />)} />
                                     <Route path="/" render={(props) => (<HomePage />)} />
                                 </Switch>
                             </div>

@@ -11,7 +11,9 @@
             "start": "2019-09-13T09:30:00",
             "end": "2019-09-13T10:30:00",
             "title": "Number One",
-            "backgroundColor": "#1289af"
+            "description": "Descrition for this event",
+            "backgroundColor": "#1289af",
+            "url": "#/events/EventSpecificPage"
         },
         {
             "start": "2019-09-13T14:30:00",

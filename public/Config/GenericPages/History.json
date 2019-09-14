@@ -1,0 +1,42 @@
+{
+    "subHeaderText": "A Buddhist Monastery in the Forest Tradition of Ajahn Chah",
+    "subMenu": [
+        {
+            "title": "About",
+            "Path": "/About"
+        },
+        {
+            "title": "History",
+            "Path": "/GP/History"
+        },
+        {
+            "title": "Resident",
+            "Path": "/GP/Resident"
+        },
+        {
+            "title": "Committee",
+            "Path": "/GP/Committee"
+        },
+        {
+            "title": "Forest Tradition",
+            "Path": "/GP/ForestTradition"
+        }
+    ],
+    "contentSections": [
+        {
+            "content": "<p>Bodhinyanarama is a monastic sanctuary situated in a 51 hectare (126 acre) wooded valley near Wellington, New Zealand. The monastery is the focus for a thriving Buddhist community and serves a variety of functions. While principally a residence for those wishing to participate or train in the monastic lifestyle, the large public area and meeting hall are used for religious festivals, public meetings and retreats. The forested area with remote lodgings provides a suitable environment for seclusion. The senior monks instruct in meditation, teach Buddhist principles, lead retreats and provide religious services for the Buddhist community, both at the monastery and at other venues in New Zealand and elsewhere.</p>",
+            "BlockType": "html"
+        },
+        {
+            "Title": "Events",
+            "Content": "This week's event",
+            "BlockType": "EventCalender",
+            "type": "Weekly"
+        },
+        {
+            "Title": "News",
+            "Content": "News Updates",
+            "BlockType": "NewsList"
+        }
+    ]
+}

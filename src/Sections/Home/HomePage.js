@@ -8,6 +8,8 @@ import { fadeIn } from "animate.css"
 import { HTMLDisplay } from "../../Cards/HTMLDisplay";
 import Calendar from "../../Cards/Events/Calendar";
 import NewsList from "../../Cards/News/NewsList";
+import SubMenu from "../../Cards/SubMenu/subMenu";
+
 
 
 class HomePage extends React.Component {
@@ -54,6 +56,7 @@ class HomePage extends React.Component {
                     </div>
                     <div className="d-flex flex-grow-1 h-100">
                         <div className="d-flex flex-column h-100 m-2">
+                            {Settings && Settings.subMenu ? <div className="d-flex w-100"><SubMenu Settings={Settings.subMenu} /></div> : null}
                             {
                                 Settings && Settings.contentSections
                                     ? Settings.contentSections.map((section, i) => {
@@ -68,7 +71,7 @@ class HomePage extends React.Component {
                                         if (section.BlockType === "EventCalender") {
                                             return (<div className="d-flex flex-column m-1 mb-2">
                                                 <div className="mb-3">{section.Title ? this.getSectionTitle(section.Title) : null}</div>
-                                                <div className="ml-3 mr-3"> <Calendar /></div>
+                                                <div className="ml-3 mr-3"> <Calendar viewType={section.viewType ? section.viewType : null} /></div>
                                                 {i !== Settings.contentSections.length - 1 ? this.getBlockHR() : null}
                                             </div>
                                             )
