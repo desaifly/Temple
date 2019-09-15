@@ -64,7 +64,7 @@ class GenericPage extends React.Component {
                                             return (<div className="d-flex flex-column m-1 mb-2 animated fadeIn">
                                                 {section.Title ? this.getSectionTitle(section.Title) : null}
                                                 <HTMLDisplay value={section.content} />
-                                                {i !== Settings.contentSections.length - 2 ? this.getBlockHR() : null}
+                                                {i !== Settings.contentSections.length - 1 ? this.getBlockHR() : null}
                                             </div>
                                             )
                                         }
