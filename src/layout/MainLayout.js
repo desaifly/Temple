@@ -1,17 +1,18 @@
 import React, { Suspense, lazy } from 'react';
 import { HashRouter, Switch, Route } from 'react-router-dom';
 import { TopHeader } from './TopHeader';
-import $ from 'jquery';
-import HomePage from '../Sections/Home/HomePage';
-import GenericPage from '../Sections/Generic/GenericPage';
-import Events from '../Sections/Events/Events';
+import Loading from '../Cards/Loading/Loading';
+
+const GenericPage = lazy(() => import('../Sections/Generic/GenericPage'));
+const Events = lazy(() => import('../Sections/Events/Events'));
+const News = lazy(() => import('../Sections/News/News'));
+const HomePage = lazy(() => import('../Sections/Home/HomePage'));
 
 class MainLayout extends React.Component {
     constructor(props) {
         ////console.log( ' IN THE Constructor' );
         super(props);
     }
-
 
     render() {
 
@@ -22,10 +23,11 @@ class MainLayout extends React.Component {
                         <div className="d-flex w-100">
                             <TopHeader />
                         </div>
-                        <Suspense fallback={<div className="mx-auto text-center">Loading</div>}>
+                        <Suspense fallback={<div className="mx-auto text-center ImageSize3"><Loading /></div>}>
                             <div className="h-100">
                                 <Switch>
-                                    <Route exact path="/GP/:page" render={(props) => (<GenericPage page={props.match.params.page} />)} />
+                                    <Route exact path="/News" render={(props) => (<News />)} />
+                                    <Route exact path="/GP/:page" render={(props) => (<GenericPage prefix="GenericPages" page={props.match.params.page} />)} />
                                     <Route exact path="/:prefix/:page" render={(props) => (<GenericPage prefix={props.match.params.prefix} page={props.match.params.page} />)} />
                                     <Route exact path="/Events" render={(props) => (<Events />)} />
                                     <Route path="/" render={(props) => (<HomePage />)} />

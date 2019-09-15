@@ -45,7 +45,18 @@ html { font-size: 1rem; }
     width: 2rem;
     height: 2rem;
 }
+.ImageSize3{
+    width: 3rem;
+    height: 3rem;
+}
 
+.RotateImg180 {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
 .SubHeader{
     font-size: 2rem;
     background-color: var(--blue-subHeader);
@@ -78,7 +89,7 @@ html { font-size: 1rem; }
     font-size: 1.2rem;
 }
 .ContentBottomLine{
-    border-bottom: 0.5rem solid #0088cc;
+    border-bottom: 0.5rem solid var(--blue-subHeader);
 }
 .NewsTitle{
    font-size: 1.25rem;
@@ -89,7 +100,7 @@ html { font-size: 1rem; }
    border-radius: .5rem;
 }
 .BlockTitle{
-    width: 12rem;
+    min-width: 12rem;
     font-size: 1.5rem;
     background-color: var(--blue-subHeader);
     font-weight: bold;
@@ -120,4 +131,22 @@ a:hover {
 }
 a:-webkit-any-link{
     text-decoration: none !important;
+}
+
+.PhotoGroupSection{
+    width: 20rem;
+    min-height: 10rem;
+}
+
+.PhotoGroupViwAll{
+    height: 3.5rem;
+    color: var(--white);
+    background-color: var(--grey-dark);
+    border-style: solid;
+    border-width: 3px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 1rem;
 }

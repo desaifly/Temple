@@ -32,7 +32,7 @@ class Photo extends React.Component {
         const { Settings } = this.state;
         return (
 
-            <div className="d-flex w-100 h-100 justify-content-center" >
+            <div className="d-flex w-100 h-100 justify-content-center animated fadeIn" >
                 {
                     Settings
                         ? <div className="d-flex w-100 h-100 flex-column">

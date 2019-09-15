@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link } from 'react-router-dom';
 import Loading from "../Cards/Loading/Loading";
-
+import { fadeIn } from 'animate.css';
 
 
 class SubHeader extends React.Component {
@@ -22,7 +22,7 @@ class SubHeader extends React.Component {
     render() {
         const { text } = this.state;
         return (
-            <div className="d-flex w-100 justify-content-center SubHeader p-1">
+            <div className="d-flex w-100 justify-content-center SubHeader p-1 animated fadeIn">
                 {
                     text
                         ? text

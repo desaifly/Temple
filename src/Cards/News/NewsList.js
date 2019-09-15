@@ -22,7 +22,7 @@ class NewsList extends React.Component {
         let localSettings = null;
         Settings(["News.json"])
             .then(result => {
-                localSettings = JSON.parse(result);
+                localSettings = JSON.parse(result).News;
                 this.setState({ Settings: localSettings })
             })
     }
@@ -35,15 +35,20 @@ class NewsList extends React.Component {
 
             Settings
                 ?
-                Settings.News.map((newsItem, i) => {
+                Settings.map((newsItem, i) => {
                     return (
                         i < itemsToShow
                             ?
-                            <div className="m-2">
+                            <div className="m-2 animated fadeIn">
                                 <div className="NewsTitle d-inline-flex ml-2 pt-1 pb-1 pl-2 pr-2">{newsItem.title}</div>
                                 <div className="d-inline-flex ml-2 pl-2 pr-2">{newsItem.description}</div>
                             </div>
-                            : null
+                            : itemsToShow === 0
+                                ? <div className="m-2 animated fadeIn">
+                                    <div className="NewsTitle d-inline-flex ml-2 pt-1 pb-1 pl-2 pr-2">{newsItem.title}</div>
+                                    <div className="d-inline-flex ml-2 pl-2 pr-2">{newsItem.description}</div>
+                                </div>
+                                : null
                     )
                 })
                 : <div className="ImageSize2 ml-2 pl-2"><Loading /></div>

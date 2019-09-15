@@ -1,16 +1,14 @@
-import * as React from "react";
+import React, { Suspense, lazy } from 'react';
 import { Link } from 'react-router-dom';
-import SubHeader from "../../layout/SubHeader";
 import { Settings } from "../../Resources/Utility/Config";
 import Loading from "../../Cards/Loading/Loading";
-import PhotoGroup from "../../Cards/Photos/PhotoGroup";
 import { fadeIn } from "animate.css"
-import { HTMLDisplay } from "../../Cards/HTMLDisplay";
-import Calendar from "../../Cards/Events/Calendar";
-import NewsList from "../../Cards/News/NewsList";
-import SubMenu from "../../Cards/SubMenu/subMenu";
 
-
+const SubMenu = lazy(() => import('../../Cards/SubMenu/subMenu'));
+const NewsList = lazy(() => import('../../Cards/News/NewsList'));
+const Calendar = lazy(() => import('../../Cards/Events/Calendar'));
+const SubHeader = lazy(() => import('../../layout/SubHeader'));
+const HTMLDisplay = lazy(() => import('../../Cards/HTMLDisplay'));
 
 class GenericPage extends React.Component {
     constructor(props) {

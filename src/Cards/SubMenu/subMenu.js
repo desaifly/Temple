@@ -33,7 +33,7 @@ class SubMenu extends React.Component {
         return (
             Settings
                 ?
-                <div className=" d-flex flex-wrap pt-2 pb-2 SubMenu w-100">
+                <div className=" d-flex flex-wrap pt-2 pb-2 SubMenu w-100 animated fadeIn">
                     {
                         Settings.map((subMenuItem, i) => {
 

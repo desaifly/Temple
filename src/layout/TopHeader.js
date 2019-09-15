@@ -31,7 +31,7 @@ export class TopHeader extends React.Component {
     render() {
         const { Settings } = this.state;
         return (
-            <div classNameName="d-flex w-100 Header-1Background w-100 justify-content-between" >
+            <div classNameName="d-flex w-100 Header-1Background w-100 justify-content-between animated fadeIn" >
 
                 {Settings
                     ?

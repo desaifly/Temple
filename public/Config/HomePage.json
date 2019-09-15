@@ -66,9 +66,41 @@
             "viewType": "Weekly"
         },
         {
+            "Title": "Monestery Photos",
+            "sectionLabel": "Monestery Photos",
+            "BlockType": "PhotoGroup",
+            "Photos": [
+                {
+                    "header": "The vassa sangha",
+                    "href": "/Home/dn-sangha.jpg"
+                },
+                {
+                    "header": "A combination of hail, frost and things generally cold.",
+                    "href": "/Home/dl-ice.jpg"
+                },
+                {
+                    "header": "An anagarika sew-in.",
+                    "href": "/Home/dj-anag.jpg"
+                },
+                {
+                    "header": "Ethan and Bryce take the anagarika",
+                    "href": "/Home/dh-anag.jpg"
+                },
+                {
+                    "header": "Anagarika Ryan and Ajahn Joe ",
+                    "href": "/Home/df-patio.jpg"
+                },
+                {
+                    "header": "The birthday celebration at the Thai Embassy for the king of Thailand.",
+                    "href": "/Home/dd-embassy.jpg"
+                }
+            ]
+        },
+        {
             "Title": "News",
             "Content": "News Updates",
-            "BlockType": "NewsList"
+            "BlockType": "NewsList",
+            "numberOfNewsToDisplay": 3
         }
     ]
 }

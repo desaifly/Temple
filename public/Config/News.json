@@ -1,4 +1,29 @@
 {
+    "subHeaderText": "Monastery News Updates",
+    "subMenu": [
+        {
+            "title": "News",
+            "Path": "/News"
+        },
+        {
+            "title": "Newsletter",
+            "Path": "/GP/Newsletter"
+        },
+        {
+            "title": "Stupa",
+            "Path": "/GP/Stupa"
+        },
+        {
+            "title": "Photos",
+            "Path": "/GP/Photos"
+        }
+    ],
+    "contentSections": [
+        {
+            "BlockType": "NewsList",
+            "numberOfNewsToDisplay": 10
+        }
+    ],
     "News": [
         {
             "date": "2019-09-13",

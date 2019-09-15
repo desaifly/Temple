@@ -81,10 +81,10 @@ class Calendar extends React.Component {
         const { Settings, viewType, breakpoint } = this.state;
         return (
 
-            <div className="d-flex w-100 h-100 justify-content-center"  >
+            <div className="d-flex w-100 h-100 justify-content-center animated fadeIn"  >
                 {
                     Settings
-                        ? <div className="d-flex w-100 flex-column">
+                        ? <div className="d-flex w-100 flex-column animated fadeIn">
                             <FullCalendar defaultView={
                                 viewType === "Weekly"
                                     ? "dayGridWeek"

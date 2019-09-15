@@ -4,7 +4,7 @@ import { fadeIn } from 'animate.css';
 
 
 
-export class HTMLDisplay extends React.Component {
+class HTMLDisplay extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -29,7 +29,7 @@ export class HTMLDisplay extends React.Component {
 
 
         return (
-            <div className={divClass}>
+            <div className="animated fadeIn">
 
                 {
                     value
@@ -44,3 +44,4 @@ export class HTMLDisplay extends React.Component {
     }
 
 }
+export default HTMLDisplay;

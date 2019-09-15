@@ -1,16 +1,18 @@
-import * as React from "react";
+import React, { Suspense, lazy } from 'react';
 import { Link } from 'react-router-dom';
-import SubHeader from "../../layout/SubHeader";
+
 import { Settings } from "../../Resources/Utility/Config";
 import Loading from "../../Cards/Loading/Loading";
-import PhotoGroup from "../../Cards/Photos/PhotoGroup";
+
 import { fadeIn } from "animate.css"
-import { HTMLDisplay } from "../../Cards/HTMLDisplay";
-import Calendar from "../../Cards/Events/Calendar";
-import NewsList from "../../Cards/News/NewsList";
-import SubMenu from "../../Cards/SubMenu/subMenu";
 
 
+const SubMenu = lazy(() => import('../../Cards/SubMenu/subMenu'));
+const NewsList = lazy(() => import('../../Cards/News/NewsList'));
+const Calendar = lazy(() => import('../../Cards/Events/Calendar'));
+const SubHeader = lazy(() => import('../../layout/SubHeader'));
+const HTMLDisplay = lazy(() => import('../../Cards/HTMLDisplay'));
+const PhotoGroup = lazy(() => import('../../Cards/Photos/PhotoGroup'));
 
 class HomePage extends React.Component {
     constructor(props) {
@@ -33,14 +35,14 @@ class HomePage extends React.Component {
 
     getSectionTitle(title) {
         return (
-            <div className="d-flex justify-content-center w-100"> <div className="BlockTitle">{title}</div> </div>
+            <div className="d-flex justify-content-center w-100"> <div className="BlockTitle p-2">{title}</div> </div>
         )
     }
 
     render() {
         const { Settings } = this.state;
         return (
-            <div className="d-flex flex-column w-100 h-100  " >
+            <div className="d-flex flex-column w-100 h-100" >
                 <SubHeader text={Settings && Settings.subHeaderText ? Settings.subHeaderText : null} />
                 <div className="d-flex w-100 h-100">
                     <div className="d-none d-lg-flex flex-column h-100 align-items-start p-2">
@@ -80,12 +82,20 @@ class HomePage extends React.Component {
                                             return (<div className="d-flex flex-column m-1 mb-2 w-100">
                                                 {section.Title ? this.getSectionTitle(section.Title) : null}
                                                 <div className="d-flex flex-column ml-1 mt-2 animated fadeIn">
-                                                    <NewsList />
+                                                    <NewsList itemsToShow={section.numberOfNewsToDisplay ? section.numberOfNewsToDisplay : null} />
                                                     {i !== Settings.contentSections.length - 1 ? this.getBlockHR() : null}
                                                 </div>
 
                                             </div>
                                             )
+                                        }
+                                        if (section.BlockType === "PhotoGroup") {
+                                            return (
+                                                <div className="d-flex flex-column m-1 mb-2 w-100">
+                                                    {section.Title ? this.getSectionTitle(section.Title) : null}
+                                                    <div className="mt-1"><PhotoGroup Settings={section} /></div>
+                                                </div>
+                                            );
                                         }
                                     })
                                     : <div className="ImageSize2 "><Loading /></div>
