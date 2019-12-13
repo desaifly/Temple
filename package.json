@@ -17,7 +17,7 @@
     "@fullcalendar/timegrid": "^4.3.0",
     "@fullcalendar/interaction": "^4.3.0",
     "@fullcalendar/list": "^4.3.0",
-    "npm": "^6.9.0",
+    "npm": "^6.13.4",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "react-html-parser": "^2.0.2",
